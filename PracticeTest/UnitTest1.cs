@@ -21,5 +21,34 @@ namespace PracticeTest
             Assert.AreEqual(5, result2);
         }
 
+        [TestMethod]
+        public void IsEligible_ShouldReturn_Yes()
+        {
+            //Arrange
+            List<string> words = new List<string> { "part" ,"trap" };
+            SwapCompetition swap = new SwapCompetition();
+
+            //Act
+            string result = swap.IsEligible(words);
+
+            //Arrange
+            Assert.AreEqual("Yes", result);
+
+        }
+
+        [TestMethod]
+
+        public void IsEligible_ShouldReturn_No()
+        {
+            //Arrange
+            List<string> words = new List<string> { "noon", "moon" };
+            SwapCompetition swap = new SwapCompetition();
+
+            //Act
+            string result = swap.IsEligible(words);
+
+            //Arrange
+            Assert.AreEqual("No", result);
+        }
     }
 }
